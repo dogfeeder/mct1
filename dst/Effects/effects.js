@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var env = require("../util/env");
+var log_1 = require("../util/log");
 function effects(type, opts) {
     if (opts === void 0) { opts = {}; }
     if (env.isNode) {
@@ -8,6 +9,7 @@ function effects(type, opts) {
     }
     var magik = magikcraft.io;
     var PotionEffect = magik.type("potion.PotionEffect");
+    log_1.log("Potion Effect: " + PotionEffect);
     var PotionEffectType = magik.type("potion.PotionEffectType");
     var Color = magik.type("Color");
     var mct1 = magik.global('mct1');
@@ -20,6 +22,7 @@ function effects(type, opts) {
     var color = opts.color || "GREEN";
     var c = Color[color];
     var l = PotionEffectType[type];
+    log_1.log("Potion Effect 2: " + l);
     var effect = new PotionEffect(l, duration, amplifier, true, true, c);
     magik.getSender().addPotionEffect(effect);
     magik.setTimeout(function () {

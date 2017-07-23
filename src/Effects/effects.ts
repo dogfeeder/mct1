@@ -1,5 +1,6 @@
 import { MCT1 } from '../types/mct1';
 import * as env from '../util/env';
+import { log } from '../util/log';
 
 export function effects(type: string, opts: any = {}) {
     if (env.isNode) {
@@ -8,6 +9,7 @@ export function effects(type: string, opts: any = {}) {
 
     const magik = magikcraft.io;
     const PotionEffect = magik.type("potion.PotionEffect");
+    log("Potion Effect: " + PotionEffect);
     const PotionEffectType = magik.type("potion.PotionEffectType");
     const Color = magik.type("Color");
     const mct1 = magik.global('mct1') as MCT1;
@@ -22,6 +24,7 @@ export function effects(type: string, opts: any = {}) {
     const color = opts.color || "GREEN";
     const c = Color[color];
     const l = PotionEffectType[type];
+    log("Potion Effect 2: " + l);
     const effect = new PotionEffect(l, duration, amplifier, true, true, c);
     magik.getSender().addPotionEffect(effect);
     magik.setTimeout(() => {
