@@ -19,11 +19,16 @@ function _default() {
  */
 export const spells = {
     _default,
-    query
+    query,
+    test
 }
 
 function query() {
     log(`BGL: ${mct1.T1Player.BGL.getBGL}`);
+}
+
+function test() {
+    log('test');
 }
 
 function initialise(callback?: () => void) {
