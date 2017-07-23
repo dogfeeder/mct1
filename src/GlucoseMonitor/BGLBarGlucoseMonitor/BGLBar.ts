@@ -45,8 +45,8 @@ export class BGLBar {
     update() {
         const bgl = this.BGL.getBGL();
         // Bar progress is 0 - 0.99
-        const scaledBGL = Math.max(bgl/30, 0.99);
-        this.bar.setProgress(scaledBGL);
+        const scaledBGL = Math.max(bgl / 30, 0.99);
+        this.bar.setProgress(0.87);
         if (this.BGL.BGLinRange) {
             this.makeBarGreen();
         } else {
