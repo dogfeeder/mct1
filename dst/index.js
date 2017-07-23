@@ -24,6 +24,10 @@ function query() {
     log_1.log("BGL: " + mct1_1.mct1.T1Player.BGL.getBGL);
     log_1.log(JSON.stringify(mct1_1.mct1.BGLBar));
 }
+function test() {
+    mct1_1.mct1.T1Player.BGL.applyBGLchange(5);
+    log_1.log("Change applied");
+}
 function initialise(callback) {
     log_1.log('Initialising...');
     var player = new T1Player_1.T1Player();

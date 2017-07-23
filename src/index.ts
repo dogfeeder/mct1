@@ -27,6 +27,11 @@ function query() {
     log(JSON.stringify(mct1.BGLBar));
 }
 
+function test() {
+    mct1.T1Player.BGL.applyBGLchange(5);
+    log("Change applied");
+}
+
 function initialise(callback?: () => void) {
     log('Initialising...');
     const player = new T1Player();
