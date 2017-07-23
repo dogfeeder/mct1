@@ -1,4 +1,5 @@
 import { BGL } from '../../BGL/BGL';
+import { log } from '../../util/log';
 
 export interface IDependencies {
     Bars: BossBarAPI;
@@ -47,6 +48,7 @@ export class BGLBar {
         // Bar progress is 0 - 0.99
         const scaledBGL = Math.max(bgl / 30, 0.99);
         this.bar.setProgress(0.87);
+        log(this.bar.getProgress);
         if (this.BGL.BGLinRange) {
             this.makeBarGreen();
         } else {
