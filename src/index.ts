@@ -27,8 +27,8 @@ function query() {
     log(`BGL: ${mct1.T1Player.BGL.getBGL}`);
 }
 
-function test(value: number) {
-    mct1.T1Player.BGL.applyBGLchange(value);
+function test() {
+    mct1.T1Player.BGL.applyBGLchange(-10);
 }
 
 function initialise(callback?: () => void) {
