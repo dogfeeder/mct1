@@ -28,7 +28,8 @@ function query() {
 }
 
 function test() {
-    mct1.T1Player.BGL.applyBGLchange(-10);
+    mct1.T1Player.BGL.applyBGLchange(10);
+    mct1.BGLBar.monitor();
 }
 
 function initialise(callback?: () => void) {
