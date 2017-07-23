@@ -26,7 +26,7 @@ function query() {
 }
 function test() {
     mct1_1.mct1.T1Player.BGL.applyBGLchange(10);
-    log_1.log(mct1_1.mct1.T1Player.BGL.getBGL().toString());
+    log_1.log("" + mct1_1.mct1.T1Player);
 }
 function initialise(callback) {
     log_1.log('Initialising...');

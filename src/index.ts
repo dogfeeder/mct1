@@ -29,7 +29,7 @@ function query() {
 
 function test() {
     mct1.T1Player.BGL.applyBGLchange(10);
-    log(mct1.T1Player.BGL.getBGL().toString());
+    log("" + mct1.T1Player);
 }
 
 function initialise(callback?: () => void) {
