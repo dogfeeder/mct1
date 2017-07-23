@@ -24,6 +24,7 @@ export const spells = {
 
 function query() {
     log(`BGL: ${mct1.T1Player.BGL.getBGL}`);
+    log(JSON.stringify(mct1.BGLBar));
 }
 
 function initialise(callback?: () => void) {
